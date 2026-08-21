@@ -27,6 +27,10 @@ def compare_all_classification_models(
     print("=" * 80)
     print(" [03_CLASSIFICATION] SO SÁNH 3 MÔ HÌNH: RANDOM FOREST, ADABOOST, SVM (10-FOLD CV)")
     print("=" * 80)
+    print("📌 CÁC THAM SỐ ĐÃ ĐƯỢC TINH CHỈNH TỐI ƯU (HYPERPARAMETER TUNING):")
+    print("   1. Random Forest : n_estimators=120, max_depth=12, min_samples_split=6, class_weight='balanced'")
+    print("   2. AdaBoost      : n_estimators=100, learning_rate=0.15")
+    print("   3. SVM RBF Kernel: C=1.5, kernel='rbf', gamma='scale', class_weight='balanced', cache_size=1000MB\n")
 
     _, rf_metrics = train_and_eval_random_forest(data_path=data_path, n_splits=n_splits)
     _, ada_metrics = train_and_eval_adaboost(data_path=data_path, n_splits=n_splits)
